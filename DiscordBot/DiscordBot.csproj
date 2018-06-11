@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Discord.Net" Version="1.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Commands\" />
+        <Folder Include="Helpers\" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Helpers\SheduleManager.cs" />
+    </ItemGroup>
+</Project>
