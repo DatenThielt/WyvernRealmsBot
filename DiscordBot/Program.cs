@@ -145,8 +145,9 @@ namespace DiscordBot
                 .Include(blog => blog.Posts)
                 .ToList();
 
-                db.Blogs.Add(new Blog { Url = "http://blogs.msdn.com/adonet", Posts = new List<Post>() { new Post() { } } });
-
+                await db.Blogs.AddAsync(new Blog { Url = "http://blogs.msdn.com/adonet", Posts = new List<Post>() { new Post() { Content = "Test" } } });
+                
+                //Awaiting database addition
                 var count = db.SaveChanges();
                 Console.WriteLine("{0} records saved to database", count);
 
